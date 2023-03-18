@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="/CSS/landing.css" />
-    <link rel="stylesheet" href="content.css" />
+    <link rel="stylesheet" href="CSS/landing.css" />
+    <link rel="stylesheet" href="CSS/projects.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6680fa8d52.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="assets\icons8-earth-planet-48.png">
     <title>GeoSpencer</title>
 </head>
 
@@ -20,8 +21,8 @@
 
     <nav>
         <div id="nav-name-section" class="nav-section">
-            <div class="name">SPENCER MARTEL</div>
-            <div class="profession">GEOSPATIAL TECHNOLOGIES PROFESSIONAL</div>
+            <div class="nav-name">Spencer Martel</div>
+            <!-- <div class="nav-profession">GEOSPATIAL TECHNOLOGIES PROFESSIONAL</div> -->
         </div>
         <div id="nav-social-section" class="nav-section">
             <a href="https://www.linkedin.com/in/spencer-martel-576367239/" target="_blank" class="grow">
@@ -30,37 +31,79 @@
             <a href="https://github.com/SpencerMartel" target="_blank" class="grow">
                 <i class="fa-brands fa-github fa-3x"></i>
             </a>
+            <a href="mailto:spencer.martel4@gmail.com" class="grow">
+                <i class="fa-solid fa-envelope fa-3x"></i>
+            </a>
         </div>
         <div id="nav-links-section" class="nav-section">
-            <a href="/Resume.pdf" class="grow">RESUME</a>
+            <a href="#projects" class="grow">Projects</a>
+            <a href="/assets/Resume.pdf" target="_blank" class="grow">Resume</a>
         </div>
     </nav>
 
     <main>
-        <div id="profile"></div>
-        <div class="grid">
-            <div class="project">1</div>
-            <div class="project">2</div>
-            <div class="project">3</div>
-            <div class="project">4</div>
-            <div class="project">5</div>
-            <div class="project">6</div>
-            <div class="project">7</div>
-            <div class="project">8</div>
-            <div class="project">9</div>
+
+        <div class="landing-intro">
+            <div id="picture-decoration">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg"
+                    class="personal-photo">
+            </div>
+            <div class="intro-text">
+                <p>Hi! My name is
+                    <p1 id="landing-name">Spencer.</p1>
+                <p>I am a geospatial software developer.</p>
+                </p>
+                <br>
+                <p>I specialize in visualizing geospatial data and presenting it in beautiful ways.
+                </p>
+            </div>
+        </div>
+
+        <div id="tech-stach" class="projects">
+            <p>Tech Stack</p>
+            <div class="glowing-line"></div>
+            <div id="tech-column">
+                <i class="fa-brands fa-python fa-3x"></i>
+                <i class="fa-brands fa-html5 fa-3x"></i>
+                <i class="fa-brands fa-css3-alt fa-3x"></i>
+                <i class="fa-brands fa-square-js fa-3x"></i>
+            </div>
+        </div>
+
+        <div class="projects">
+            <p>Projects</p>
+            <div class="glowing-line"></div>
+            <div class="project-grid">
+                <div class="project">
+                    <p>Canadian Terroir</p>
+                    <div class="container">
+                        <div class="descriptor">
+                            <div class="live-demo">
+                                <a></a>
+                            </div>
+                            <div class="code">
+                                <a></a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="assets/projects/Vineyards.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <p>Landsat Reforestation Calculation</p>
+                    <div class="container">
+                        <div class="descriptor"></div>
+                        <div class="image">
+                            <img src="assets/projects/LandsatImages.png">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </main>
 
 </body>
 
 </html>
-
-<!-- 
-<div id="col-1">
-    <div id="picture-decoration">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg"
-            class="personal-photo">
-    </div>
-</div>
-<div id="col-2"><img src="LandsatImages.png" class="portfolio-photo">
-</div> -->
