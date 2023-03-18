@@ -1,7 +1,15 @@
+:root {
+    --background-color: rgb(5, 15, 31);
+    --secondary-color: rgb(41, 48, 70);
+    --white-color: rgb(255, 255, 255);
+    --accent-color: #08fdd8;
+    --breath-time: 8s
+}
+
 body {
     height: 100%;
-    width: 100vw;
-    background-color: rgb(5, 15, 31);
+    width: 100%;
+    background-color: var(--background-color);
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -9,6 +17,19 @@ body {
     font-weight: 400;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+}
+main::-webkit-scrollbar{ 
+    display: none;  /* Safari and Chrome */
+}
+main {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+html {
+    overflow: hidden;
+    line-height: 2.2rem;
 }
 
 * {
@@ -25,7 +46,7 @@ h3,
 a,
 p,
 span {
-    color: rgb(255, 255, 255);
+    color: var(--white-color);
     margin: 0;
 }
 
@@ -44,7 +65,7 @@ span {
 }
 
 #blob {
-    height: 25vmax;
+    height: 40%;
     aspect-ratio: 1;
     border-radius: 50%;
     position: absolute;
@@ -54,6 +75,13 @@ span {
     background: linear-gradient(to right, #58287a, #914d65);
     animation: rotate 20s infinite;
     opacity: 0.8;
+    overflow: hidden;
+}
+/* Take out blob not on laptops, was breaking it */
+@media only screen and (max-width: 1026px) { 
+    #blob { 
+      display: none; 
+    } 
 }
 
 #blur {
@@ -65,10 +93,10 @@ span {
 }
 
 nav {
+    position: absolute;
     display: flex;
     width: 100%;
     max-height: 10vmax;
-    position: absolute;
     z-index: 3;
     justify-content: left;
     min-height: 10vmin;
@@ -77,32 +105,32 @@ nav {
 
 nav>.nav-section {
     display: flex;
-    border-left: 2px solid rgba(255, 255, 255, 0.09);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.09);
+    /* Not sure if I like the borders or not */
+    /* border-left: 2px solid rgba(255, 255, 255, 0.09); */
+    /* border-bottom: 2px solid rgba(255, 255, 255, 0.09); */
+    background-color: var(--background-color);
     align-items: center;
 }
 
 #nav-name-section {
     padding-left: 1vw;
-    flex-basis: 60%;
-    display: grid;
-    margin: 0;
+    flex-basis: 50%;
 }
 
 .nav-name {
-    font-size: clamp(0.1vw, 2vmax, 2.5vmax);
-    color: rgb(255, 255, 255)
+    font-size: clamp(0.5vw, 2.4vmax, 2.5vmax);
+    color: var(--white-color)
 }
 
-.profession {
-    font-size: clamp(0.1vw, 1.1vmax, 1.5vmax);
+.nav-profession {
+    font-size: clamp(0.2vw, 1rem, 1.5vmax);
     color: rgb(255, 255, 255);
 }
 
 
 #nav-social-section {
     flex-basis: calc(100% / 8);
-    font-size: clamp(0.1vw, 1vmax, 1.5vw);
+    font-size: clamp(0.3vw, 0.8vmax, 2.2vmax);
     gap: 2vw;
     justify-content: center;
     padding-left: clamp(5px, 0.75vw, 1vw);
@@ -115,77 +143,123 @@ nav>.nav-section {
     align-items: center;
     gap: 2vw;
     padding-right: clamp(0px, 3.5vw, 3.5vw);
-    font-size: clamp(0.5vw, 1.3vmax, 1.5vmax);
+    font-size: clamp(0.9vw, 2.4vw, 1.8vmax);
 }
 
 .grow:hover {
-    transition: all .2s ease-in-out;
+    transition: all .25s ease-in-out;
     transform: scale(1.05);
-    color: aqua;
-}
-
-.grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(2, minmax(2px, 700px));
-    justify-content: center;
-    padding: 10px;
+    color: var(--accent-color);
 }
 
 main {
-    padding: 10vmax;
-    z-index: 2;
-    overflow-y: scroll; 
-}
-
-.project {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #353535;
-    font-size: clamp(1rem, 1vw, 1.5rem);
-    padding: 0.5rem;
-    color: #fff;
-    box-shadow: rgba(255, 255, 255, 0.3) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    scroll-behavior: smooth;
+    position: relative;
     height: 100%;
     width: 100%;
-    border-radius: 4px;
-    transition: all 500ms;
-    overflow: hidden;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    padding: 2vw 3vw 1vw 3vw;
+    z-index: 2;
+    overflow-y: scroll;
 }
 
 .landing-intro {
     display: flex;
     justify-content: center;
-    text-align: left;
-    margin-top: 10%;
+    align-items: center;
+    margin-top: 8%;
     margin-bottom: 10%;
 }
 
+/* Getting into phone land */
+@media only screen and (max-width: 650px) {
+    main {
+        line-height: 1.3rem;
+        padding-left: 2vw !important;
+        padding-right: 2vw !important;
+    }
+    #nav-links-section {
+        padding-right: 2%;
+    }
+    .landing-intro {
+        flex-direction: column;
+        text-align: center;
+        font-size: medium;
+        margin-bottom: 5%;
+        align-items: center;
+    }
+    .intro-text {
+        flex-wrap: wrap;
+        margin-top: 2%;
+        padding-left: 0% !important;
+        font-size: small !important;
+        justify-content: center;
+        max-width: 80% !important;
+        text-align: center;
+    }
+    .personal-photo {
+        width: 60% !important;
+    }
+    #picture-decoration {
+        padding-top: 5% !important;
+    }
+    #projects > p {
+        font-size: medium !important;
+    }
+}
+
+#picture-decoration {
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(2vh);
+    }
+
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
 .personal-photo {
-    width: 100%;
+    width: clamp(40%, 90%, 100%);
     max-inline-size: 80%;
     min-width: 120px;
     max-width: 300px;
     height: auto;
     aspect-ratio: 1;
     border-radius: 50%;
-    border: 3px solid aqua;
+    border: 3px solid var(--accent-color);
+    justify-content: center;
+    animation: bounce var(--breath-time) infinite;
 }
 
-#intro-text {
+.intro-text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding-left: 15%;
     padding-top: 5%;
-    justify-content: top;
+    font-size: 2rem;
+    text-align: left;
+    max-width: 45%;
 }
 
 #landing-name {
-    color: aqua;
+    color: var(--accent-color);
+}
+
+#tech-column {
+    display: flex;
+    gap: 2.5rem;
+    color: var(--white-color);
+    align-items: center;
+    justify-content: center;
 }

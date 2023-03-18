@@ -1,13 +1,15 @@
-const blob = document.getElementById("blob");
+ function blob() { 
+ const blob = document.getElementById("blob");
 
-document.body.onpointermove = event => {
-    const { clientX, clientY } = event;
+  document.body.onpointermove = event => {
+      const { clientX, clientY } = event;
 
-    blob.style.left = `${clientX}px`
-    blob.style.top = `${clientY}px`
+      blob.style.left = `${clientX}px`
+      blob.style.top = `${clientY}px`
 
-    blob.animate({
-        left: `${clientX}px`,
-        top: `${clientY}px`
-      }, { duration: 2000, fill: "forwards" });
-}
+      blob.animate({
+          left: `${clientX}px`,
+          top: `${clientY}px`
+        }, { duration: 2000, fill: "forwards" });
+  }}
+window.onload = blob();
