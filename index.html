@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="CSS/landing.css" />
     <link rel="stylesheet" href="CSS/projects.css">
+    <link rel="stylesheet" href="CSS\basics.css">
+    <link rel="stylesheet" href="CSS\nav.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Fira+Code:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/6680fa8d52.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="assets\icons8-earth-planet-48.png">
     <title>GeoSpencer</title>
 </head>
 
+
+<!-- This website was built from scratch by Spencer Martel. -->
+<!-- Thanks for stoppping by. -->
+
 <body>
-    <!-- Background blob and blur -->
     <div id="blob"></div>
     <div id="blur"></div>
     <script src="/JS/blobFunction.js"></script>
@@ -26,13 +33,13 @@
         </div>
         <div id="nav-social-section" class="nav-section">
             <a href="https://www.linkedin.com/in/spencer-martel-576367239/" target="_blank" class="grow">
-                <i class="fa-brands fa-linkedin fa-3x"></i>
+                <i class="fa-brands fa-linkedin fa-2x"></i>
             </a>
             <a href="https://github.com/SpencerMartel" target="_blank" class="grow">
-                <i class="fa-brands fa-github fa-3x"></i>
+                <i class="fa-brands fa-github fa-2x"></i>
             </a>
             <a href="mailto:spencer.martel4@gmail.com" class="grow">
-                <i class="fa-solid fa-envelope fa-3x"></i>
+                <i class="fa-solid fa-envelope fa-2x"></i>
             </a>
         </div>
         <div id="nav-links-section" class="nav-section">
@@ -50,61 +57,180 @@
             </div>
             <div class="intro-text">
                 <p>Hi! My name is
-                    <p1 id="landing-name">Spencer.</p1>
-                <p>I am a geospatial software developer.</p>
+                    <p1 id="landing-highlight">Spencer</p1>.
+                    <br>
+                    <p1>I am a</p1>
+                    <p1 id="landing-highlight">geospatial software developer</p1>.
+                    <br><br>
+                <p id=>I specialize in handling geospatial data and visualizing it in
+                    beautiful and insightful ways.</p>
                 </p>
-                <br>
-                <p>I specialize in visualizing geospatial data and presenting it in beautiful ways.
-                </p>
+                <div id="job-status">Currently Looking for work.</div>
             </div>
+        </div>
         </div>
 
         <div id="tech-stach" class="projects">
             <p>Tech Stack</p>
             <div class="glowing-line"></div>
-            <div id="tech-column">
-                <i class="fa-brands fa-python fa-3x"></i>
-                <i class="fa-brands fa-html5 fa-3x"></i>
-                <i class="fa-brands fa-css3-alt fa-3x"></i>
-                <i class="fa-brands fa-square-js fa-3x"></i>
+            <div class="tech-column">
+                <div id="tech" class="stack">
+                    <i class="fa-brands fa-python fa-3x"></i>
+                    <i class="fa-brands fa-html5 fa-3x"></i>
+                    <i class="fa-brands fa-css3-alt fa-3x"></i>
+                    <i class="fa-brands fa-square-js fa-3x"></i>
+                </div>
+                <div id="GIS" class="stack">
+                    <img src="assets/arcgispro.png" class="tech-image">
+                    <img src="assets/qgis-icon.svg" class="tech-image">
+                    <img src="assets/geopandas_icon.svg" class="tech-image">
+                </div>
             </div>
         </div>
 
-        <div class="projects">
+        <div class="projects" id="projects">
             <p>Projects</p>
             <div class="glowing-line"></div>
             <div class="project-grid">
+                <!-- Canadian Vineyards Project -->
                 <div class="project">
                     <p>Canadian Terroir</p>
+                    <div class="dividing-line"></div>
+                    <div class="tech-stack-bubble">
+                        <div class="tech-item">Python</div>
+                        <div class="tech-item">CSS</div>
+                        <div class="tech-item">Streamlit</div>
+                        <div class="tech-item">Google Earth Engine</div>
+                    </div>
                     <div class="container">
                         <div class="descriptor">
-                            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque magnam non amet laudantium totam! Quia voluptates earum, architecto quo ab ducimus nisi porro sint molestiae quam aspernatur adipisci aliquam maiores.</p>
-                            <div class="live-demo">
-                                <a></a>
-                            </div>
-                            <div class="code">
-                                <a></a>
-                            </div>
+                            <p>Continuing my passion for wine, I created this web app to compare the aspects making up
+                                Canadian terroir to those of famous wine regions of the world.
+                                I created template GeoJson objects and programatically filled the properties with data
+                                derived from Google Earth Engine.<br>
+                                I then ran a scoring algorithm comparing the terroir data for the location the user
+                                clicked
+                                to each famous wine region to return a similarity score.
+                                Whichever region has the most similar terroir is displayed to the user. <br>
+                                A more detailed description is available in the app's 'How It Works' tab.
+                            </p>
                         </div>
                         <div class="image">
                             <img src="assets/projects/Vineyards.png">
                         </div>
                     </div>
+                    <div class="button-container">
+                        <a href="https://canadianvineyards.streamlit.app/" target="_blank">
+                            <span class="button" id="live-demo">Live Site</span>
+                        </a>
+                        <a href="https://github.com/SpencerMartel/VineyardComparison" target="_blank"><span
+                                class="button" id="github-repo">Source Code</span></a>
+                    </div>
                 </div>
+                <!-- BC Wildfire Project -->
                 <div class="project">
-                    <p>Landsat Reforestation Calculation</p>
+                    <p>BC Wildfire Visualization Tool</p>
+                    <div class="dividing-line"></div>
+                    <div class="tech-stack-bubble">
+                        <div class="tech-item">Python</div>
+                        <div class="tech-item">Folium/Leaflet</div>
+                        <div class="tech-item">Command Line Tool</div>
+                        <div class="tech-item">BC OpenData API</div>
+                    </div>
                     <div class="container">
                         <div class="descriptor">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt explicabo dignissimos voluptatum consectetur aspernatur id porro nobis blanditiis. In pariatur veniam numquam aliquam. Minima adipisci, sapiente quod velit laboriosam sit?</p>
+                            <p>
+                                The 2022 fire season in BC was particularly lengthy, ending only in October. With my
+                                newly acquired skills using Folium (a Leaflet wrapper for Python)
+                                I decided to make this command line tool to better visualize how different fire seasons
+                                compared to one another. The user is prompted to enter the
+                                years they would like to display and when the program finishes we have an HTML file
+                                containing an interactive Leaflet map with heatmaps for old fire seasons
+                                and heatmaps as well as markers and polygons for the current season.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <video src="assets/projects/BC_Wildfires.mp4" autoplay loop>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://github.com/SpencerMartel/BCWildfires" target="_blank">
+                            <span class="button" id="live-demo">Source Code</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Landsat / Costa Rica Project -->
+                <div class="project">
+                    <p>Landsat Reforestation Calculation</p>
+                    <div class="dividing-line"></div>
+                    <div class="tech-stack-bubble">
+                        <div class="tech-item">Remote Sensing</div>
+                        <div class="tech-item">GIS</div>
+                        <div class="tech-item">ArcGis Pro</div>
+                        <div class="tech-item">Terrset</div>
+                        <div class="tech-item">Landsat Imagery</div>
+                    </div>
+                    <div class="container">
+                        <div class="descriptor">
+                            <p>Curious about how effective Costa Rica's landmark environmental initiative, the Payment
+                                for Ecosystem Services Program, had been
+                                my partner and I decided to look into how this policy decision was changing the
+                                country's landscape. Utilizing Landsat 4 and 8 Landsat images
+                                we were able to run supervized classification schemes to visualize land use changes.
+                                Doing this in two regions and using images from two different years
+                                gives an overview of how effective the program has been.
+                            </p>
                         </div>
                         <div class="image">
                             <img src="assets/projects/LandsatImages.png">
                         </div>
                     </div>
+                    <div class="button-container">
+                        <a href="assets/projects/Layout.png" target="_blank">
+                            <span class="button" id="live-demo">Final Map</span>
+                        </a>
+                        <a href="https://github.com/SpencerMartel/VineyardComparison" target="_blank"><span
+                                class="button" id="github-repo">Full Report</span></a>
+                    </div>
                 </div>
 
+                <!-- Schedule Buddy Project -->
+                <div class="project">
+                    <p>Concordia Schedule Buddy Discord Bot</p>
+                    <div class="dividing-line"></div>
+                    <div class="tech-stack-bubble">
+                        <div class="tech-item">Python</div>
+                        <div class="tech-item">Discord API</div>
+                        <div class="tech-item">Concordia API</div>
+                    </div>
+                    <div class="container">
+                        <div class="descriptor">
+                            <p>
+                                This project has been live since March 2022.<br>
+                                After being frustrated with the way Concordia students had to plan and create their
+                                semester schedules, I came up with this discord bot that more cleanly
+                                and intuitively offers information pertaining to Concordia Courses.<br>
+                                It uses Concordia's Open Data API to periodically update data on courses (namely student
+                                enrollment) and merges course data with
+                                course prerequisite data brought in from a seperate endpoint to give students a complete
+                                view on their courses.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <video src="assets/projects/Schedule-Buddy.mp4" autoplay loop>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://github.com/SpencerMartel/schedule_buddy" target="_blank">
+                            <span class="button" id="live-demo">Source Code</span></a>
+                    </div>
+                </div>
             </div>
         </div>
+        </div>
+
+        <div class="footnote">© Spencer Martel 2023</div>
     </main>
 
 </body>

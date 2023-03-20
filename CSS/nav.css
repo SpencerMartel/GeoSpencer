@@ -1,0 +1,58 @@
+nav {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    max-height: 10vmax;
+    z-index: 3;
+    justify-content: left;
+    min-height: 10vmin;
+    padding-bottom: clamp(0.1vw, 1vmax, 1.2vmax);
+}
+
+nav>.nav-section {
+    display: flex;
+    /* Not sure if I like the borders or not */
+    border-left: 2px solid rgba(255, 255, 255, 0.09);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.09);
+    background-color: var(--background-color);
+    align-items: center;
+}
+
+#nav-name-section {
+    padding-left: 1vw;
+    flex-basis: 50%;
+}
+
+.nav-name {
+    font-size: clamp(0.5vw, 2.4vmax, 2.5vmax);
+    color: var(--white-color)
+}
+
+.nav-profession {
+    font-size: clamp(0.2vw, 1rem, 1.5vmax);
+    color: rgb(255, 255, 255);
+}
+
+
+#nav-social-section {
+    flex-basis: calc(100% / 8);
+    font-size: clamp(0.3vw, 0.8vmax, 2.2vmax);
+    gap: 2vw;
+    justify-content: center;
+    padding-left: clamp(5px, 0.75vw, 1vw);
+    padding-right: clamp(5px, 0.75vw, 1vw);
+}
+
+#nav-links-section {
+    flex-grow: 1;
+    justify-content: end;
+    gap: 2vw;
+    padding-right: clamp(0px, 3.5vw, 3.5vw);
+    font-size: clamp(12px, 1.5vw, 1.8vw);
+}
+
+.grow:hover {
+    transition: all .25s ease-in-out;
+    transform: scale(1.05);
+    color: var(--accent-color);
+}

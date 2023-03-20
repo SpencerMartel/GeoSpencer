@@ -1,0 +1,53 @@
+:root {
+    --background-color: rgb(5, 15, 31);
+    --secondary-color: rgb(30, 35, 53);
+    --white-color: rgb(255, 255, 255);
+    --accent-color: #08fdd8;
+    --breath-time: 8s
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--background-color);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html {
+    overflow: hidden;
+    line-height: 2.2rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+a,
+p,
+span {
+    color: var(--white-color);
+    margin: 0;
+}
