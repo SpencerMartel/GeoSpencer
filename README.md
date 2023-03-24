@@ -1,4 +1,6 @@
-# GeoSpencer (GeoSpencer.dev)
+# GeoSpencer (GeoSpencer.dev) #
+
+## This project is live at [GeoSpencer.dev](https://geospencer.dev/) ##
 My personal website for displaying personal projects, achievements, and to get me hired!
 Fully responsive website with nothing but vanilla.
 
