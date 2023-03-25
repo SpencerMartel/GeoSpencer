@@ -25,7 +25,7 @@
 <body>
     <div id="blob"></div>
     <div id="blur"></div>
-    <script src="/JS/blobFunction.js"></script>
+    <script src="JS/blobFunction.js"></script>
 
     <nav>
         <div id="nav-name-section" class="nav-section">
@@ -36,16 +36,16 @@
             <a href="https://www.linkedin.com/in/spencer-martel-576367239/" target="_blank" class="grow">
                 <i class="fa-brands fa-linkedin fa-2x"></i>
             </a>
-            <a href="https://github.com/SpencerMartel" target="_blank" class="grow">
-                <i class="fa-brands fa-github fa-2x"></i>
-            </a>
             <a href="mailto:spencer.martel4@gmail.com" class="grow">
                 <i class="fa-solid fa-envelope fa-2x"></i>
+            </a>
+            <a href="https://github.com/SpencerMartel" target="_blank" class="grow">
+                <i class="fa-brands fa-github fa-2x"></i>
             </a>
         </div>
         <div id="nav-links-section" class="nav-section">
             <a href="#projects" class="grow">Projects</a>
-            <a href="/assets/Resume.pdf" target="_blank" class="grow">Resume</a>
+            <a href="assets/Resume.pdf" target="_blank" class="grow">Resume</a>
         </div>
     </nav>
 
@@ -62,11 +62,21 @@
                     <br>
                     <p1>I am a</p1>
                     <p1 id="landing-highlight">geospatial software developer</p1>.
-                    <br><br>
                 <p id=>I specialize in handling geospatial data and visualizing it in
                     beautiful and insightful ways.</p>
-                </p>
-                <div id="job-status">Currently Looking for work.</div>
+
+                <button class="call-to-action">
+                    <span>
+                        <a href="mailto:spencer.martel4@gmail.com">
+                            <p>Contact me</p>
+                            <svg class="glow-container">
+                                <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+                                <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+                            </svg>
+                        </a>
+                    </span>
+                </button>
+
             </div>
         </div>
         </div>
@@ -76,15 +86,37 @@
             <div class="glowing-line"></div>
             <div class="tech-column">
                 <div id="tech" class="stack">
-                    <i class="fa-brands fa-python fa-3x"></i>
-                    <i class="fa-brands fa-html5 fa-3x"></i>
-                    <i class="fa-brands fa-css3-alt fa-3x"></i>
-                    <i class="fa-brands fa-square-js fa-3x"></i>
+                    <div class="tooltip">
+                        <span class="tooltip-text">Python 3</span>
+                        <i class="fa-brands fa-python fa-3x tooltip" data-tooltip="Python 3"></i>
+                    </div>
+                    <div class="tooltip">
+                        <span class="tooltip-text">JavaScript</span>
+                        <i class="fa-brands fa-square-js fa-3x"></i>
+                    </div>
+                    <div class="tooltip">
+                        <span class="tooltip-text">HTML</span>
+                        <i class="fa-brands fa-html5 fa-3x"></i>
+                    </div>
+                    <div class="tooltip">
+                        <span class="tooltip-text">CSS</span>
+                        <i class="fa-brands fa-css3-alt fa-3x">
+                        </i>
+                    </div>
                 </div>
                 <div id="GIS" class="stack">
-                    <img src="assets/arcgispro.png" class="tech-image">
-                    <img src="assets/qgis-icon.svg" class="tech-image">
-                    <img src="assets/geopandas_icon.svg" class="tech-image">
+                    <div class="tooltip">
+                        <span class="tooltip-text">Esri Suite</span>
+                        <img src="assets/Esri.png" class="tech-image">
+                    </div>
+                    <div class="tooltip">
+                        <span class="tooltip-text">QGIS</span>
+                        <img src="assets/qgis-icon.svg" class="tech-image">
+                    </div>
+                    <div class="tooltip">
+                        <span class="tooltip-text">Geopandas</span>
+                        <img src="assets/geopandas_icon.svg" class="tech-image">
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,9 +137,11 @@
                     </div>
                     <div class="container">
                         <div class="descriptor">
-                            <p>Continuing my passion for wine, I created this web app to compare the aspects making up
+                            <p>Continuing my passion for wine, I created this web app to compare the aspects making
+                                up
                                 Canadian terroir to those of famous wine regions of the world.
-                                I created template GeoJson objects and programatically filled the properties with data
+                                I created template GeoJson objects and programatically filled the properties with
+                                data
                                 derived from Google Earth Engine.<br>
                                 I then ran a scoring algorithm comparing the terroir data for the location the user
                                 clicked
@@ -143,7 +177,8 @@
                             <p>
                                 The 2022 fire season in BC was particularly lengthy, ending only in October. With my
                                 newly acquired skills using Folium (a Leaflet wrapper for Python)
-                                I decided to make this command line tool to better visualize how different fire seasons
+                                I decided to make this command line tool to better visualize how different fire
+                                seasons
                                 compared to one another. The user is prompted to enter the
                                 years they would like to display and when the program finishes we have an HTML file
                                 containing an interactive Leaflet map with heatmaps for old fire seasons
@@ -151,7 +186,7 @@
                             </p>
                         </div>
                         <div class="image">
-                            <video src="assets/projects/BC_Wildfires.mp4" autoplay loop>
+                            <video src="assets/projects/BC_Wildfires.mp4" autoplay loop muted defaultmuted>
                         </div>
                     </div>
                     <div class="button-container">
@@ -174,10 +209,12 @@
                     </div>
                     <div class="container">
                         <div class="descriptor">
-                            <p>Curious about how effective Costa Rica's landmark environmental initiative, the Payment
-                                for Ecosystem Services Program, had been
-                                my partner and I decided to look into how this policy decision was changing the
-                                country's landscape. Utilizing Landsat 4 and 8 Landsat images
+                            <p>
+                                Stemming from a curiosity for how effective Payment for Ecosystem Services programs have
+                                been, my partner for this project
+                                and I used Costa Rica's PES program as a case study in land use changes affected by
+                                policy change.
+                                Utilizing Landsat 4 and 8 imagery
                                 we were able to run supervized classification schemes to visualize land use changes.
                                 Doing this in two regions and using images from two different years
                                 gives an overview of how effective the program has been.
@@ -191,8 +228,8 @@
                         <a href="assets/projects/Layout.png" target="_blank">
                             <span class="button" id="live-demo">Final Map</span>
                         </a>
-                        <a href="assets/projects/Reforestation.pdf" target="_blank"><span
-                                class="button" id="github-repo">Full Paper</span></a>
+                        <a href="assets/projects/Reforestation.pdf" target="_blank"><span class="button"
+                                id="github-repo">Full Paper</span></a>
                     </div>
                 </div>
 
@@ -212,14 +249,16 @@
                                 After being frustrated with the way Concordia students had to plan and create their
                                 semester schedules, I came up with this discord bot that more cleanly
                                 and intuitively offers information pertaining to Concordia Courses.<br>
-                                It uses Concordia's Open Data API to periodically update data on courses (namely student
+                                It uses Concordia's Open Data API to periodically update data on courses (namely
+                                student
                                 enrollment) and merges course data with
-                                course prerequisite data brought in from a seperate endpoint to give students a complete
+                                course prerequisite data brought in from a seperate endpoint to give students a
+                                complete
                                 view on their courses.
                             </p>
                         </div>
                         <div class="image">
-                            <video src="assets/projects/Schedule-Buddy.mp4" autoplay loop>
+                            <video src="assets/projects/Schedule-Buddy.mp4" autoplay loop muted defaultmuted>
                         </div>
                     </div>
                     <div class="button-container">

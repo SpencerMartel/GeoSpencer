@@ -70,7 +70,7 @@
 }
 
 .project:hover {
-    transform: translateY(-5px) translateX(5px);
+    transform: translateY(-5px);
     box-shadow: 0px 3px 30px 2px rgba(145, 145, 145, 0.3);
 }
 
@@ -95,11 +95,13 @@
     line-height: 2em;
 }
 
-.container > .image{
+.container  .image{
     display: flex;
     width: 50%;
+    height: fit-content;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 0px 8px var(--accent-color);
 }
 
 img, video {
@@ -108,7 +110,6 @@ img, video {
     aspect-ratio: 1;
     border: 1px solid var(--accent-color);
     border-radius: 4px;
-    
 }
 
 .tech-stack-bubble {
@@ -129,7 +130,7 @@ img, video {
     font-weight: 100;
     font-size: clamp(0.3rem, 80%, 1.2rem);
     background-color: rgba(14, 32, 61, 0.61);
-    border: 1.5px solid #27f5d67a;
+    border: 1.5px solid var(--secondary-accent-color);
     border-radius: 8px;
     padding: 1%;
     line-height: 1rem;
@@ -139,8 +140,7 @@ img, video {
 .dividing-line {
     margin: 1% 1vw 1vh 0;
     padding-left: 1%;
-    background:linear-gradient(90deg, rgba(128, 128, 128, 0.616), var(--secondary-color));
-    height: 0.25vh;
+    background: linear-gradient(90deg, rgb(135 131 131 / 83%), transparent);    height: 0.25vh;
     border-radius: 8px;
 }
 
@@ -157,9 +157,15 @@ img, video {
     border: 1px solid var(--accent-color);
     text-align: center;
     margin: auto;
-    background-color: #27f5d67a;
+    background-color: var(--secondary-accent-color);
     padding: 0.3em 1em;
     border-radius: 14px;
+    box-shadow: 3px 0px 19px -5px rgba(0, 0, 0, 0.0);
+    transition: box-shadow 300ms ease;
+}
+
+.button:hover {
+    box-shadow: 3px 0px 19px -5px var(--accent-color);
 }
 
 

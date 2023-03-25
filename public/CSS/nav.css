@@ -12,8 +12,8 @@ nav {
 nav>.nav-section {
     display: flex;
     /* Not sure if I like the borders or not */
-    border-left: 2px solid rgba(255, 255, 255, 0.09);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.09);
+    /* border-left: 2px solid rgba(255, 255, 255, 0.09);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.09); */
     background-color: var(--background-color);
     align-items: center;
 }
@@ -35,13 +35,16 @@ nav>.nav-section {
 
 
 #nav-social-section {
-    flex-basis: calc(100% / 8);
+    flex-basis: calc(100% / 7);
     font-size: clamp(0.3vw, 0.8vmax, 2.2vmax);
     gap: 2vw;
+    z-index: 5;
     justify-content: center;
     padding-left: clamp(5px, 0.75vw, 1vw);
     padding-right: clamp(5px, 0.75vw, 1vw);
 }
+
+
 
 #nav-links-section {
     flex-grow: 1;
