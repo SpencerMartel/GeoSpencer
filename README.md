@@ -1,4 +1,4 @@
-# GeoSpencer (GeoSpencer.dev) #
+# GeoSpencer #
 
 ## This project is live at [GeoSpencer.dev](https://geospencer.dev/) ##
 My personal website for displaying personal projects, achievements, and to get me hired!
