@@ -62,10 +62,10 @@ main {
 
 .call-to-action {
     --glow-line-shadow: rgba(40, 132, 131);
-    --glow-line-thickness: 0.5px;
-    --container-offset: 25px;
-    --glow-blur-size: 5px;
-    --animation-speed: 1000ms;
+    --glow-line-thickness: 0.8px;
+    --container-offset: 50px;
+    --glow-blur-size: 8px;
+    --animation-speed: 1500ms;
 
 
     position: relative;
@@ -75,6 +75,7 @@ main {
     width: fit-content;
     padding: 0.3rem 0.8rem;
     border-radius: 10px;
+    transition: scale 700ms;
 }
 
 .glow-container {
@@ -84,6 +85,10 @@ main {
     width: calc(100% + var(--container-offset));
     height: calc(100% + var(--container-offset));
     opacity: 0;
+}
+
+.call-to-action:hover {
+    scale: 1.05;
 }
 
 .glow-blur,
@@ -276,9 +281,13 @@ main {
     #tech-column {
         font-size: 80%;
     }
+
+    .tooltip-text {
+        font-size: medium;
+    }
 }
 
 .footnote {
     color: var(--white-color);
-    text-align: end;
+    text-align: start;
 }
