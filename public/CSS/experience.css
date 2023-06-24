@@ -1,0 +1,62 @@
+#tech-and-experience {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#work-experience>.tech-column {
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.ghgsat-logo {
+    height: 4rem;
+}
+
+.work-experience-row {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    width: 100%;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    column-gap: 3em;
+}
+
+.work-experience-row>a>svg {
+    justify-content: flex-start;
+    width: 100px;
+}
+
+.work-experience-row>a>img {
+    aspect-ratio: 1;
+    object-fit: contain;
+    height: 6em;
+}
+
+.content-column {
+    padding-right: 1rem;
+}
+
+.employer-decorator>h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.content-column>h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    padding-left: 2rem;
+}
+
+.employer-decorator {
+    width: 300px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .work-experience-row {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}

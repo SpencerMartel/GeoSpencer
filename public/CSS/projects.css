@@ -104,7 +104,7 @@
     box-shadow: 0px 0px 8px var(--accent-color);
 }
 
-img, video {
+.image > img, video {
     max-width: 100%;
     object-fit: cover;
     aspect-ratio: 1;
@@ -192,6 +192,12 @@ img, video {
         justify-content: center;
         width: auto;
         flex-wrap: wrap;
+    }
+    #tech-and-experience {
+        flex-direction: column !important;
+    }
+    #tech-stack, #work-experience {
+        width: 100% !important;
     }
     
 }

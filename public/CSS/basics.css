@@ -43,6 +43,11 @@ a {
     text-decoration: none;
 }
 
+u {
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
 h1,
 h2,
 h3,
