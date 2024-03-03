@@ -16,7 +16,8 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/6680fa8d52.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="assets\icons8-earth-planet-48.png">
-    <title>GeoSpencer</title>
+    <title>GeoSpencer - Spencer Martel's Personal Portfolio</title>
+    <meta name="description" content="Geospatial Software Developer Personal Portfolio, experience and projects.">
 </head>
 
 
@@ -26,6 +27,7 @@
 <body>
     <div id="blob"></div>
     <div id="blur"></div>
+    <!-- This thing is cool, but the performance sucks :( -->
     <!-- <script src="JS/blobFunction.js"></script> -->
 
     <nav>
@@ -114,7 +116,8 @@
                                 <h3>Operations Technician</h3>
                                 <div class="dividing-line"></div>
                             </div>
-                            <h2>Developer & data processor working in operations to quantify methane and carbon dioxide source rates derived from satelitte imagery.</h2>
+                            <h2>Developer & data processor working in operations to quantify methane and carbon dioxide
+                                source rates derived from satelitte imagery.</h2>
                             <ul>
                                 <li>Process daily greenhouse gas data collected from satelite and aircraft instruments.
                                 </li>
@@ -132,10 +135,11 @@
                         <div class="content-column">
                             <div class="employer-decorator">
                                 <h1>Concordia University</h1>
-                                <h3>Research Assistant</h3>
+                                <h3>Web Developer</h3>
                                 <div class="dividing-line"></div>
                             </div>
-                            <h2>Web developer for the Geomedia Lab under Ph.D. candidate Léa Denieul.</h2>
+                            <h2>Web developer for the Geomedia Lab under Ph.D. candidate Léa Denieul Pinsky.</h2>
+                            <h2>This project is live at <a href="https://geomedialab.github.io/Kanehsatake-Land-Defense/" target="_blank">https://geomedialab.github.io/Kanehsatake-Land-Defense/</a></h2>
                             <h2>Primary focus on creating an interactive map displaying Léa's research involving
                                 temporal components and query functionality inviting the user to interact with the data
                                 to learn about land disposession in the Kanehsatà:ke region.
@@ -192,43 +196,47 @@
             <p>Projects</p>
             <div class="glowing-line"></div>
             <div class="project-grid">
-                <!-- Canadian Vineyards Project -->
+                <!-- Kanehsatake project -->
                 <div class="project">
-                    <p>Canadian Terroir</p>
+                    <p>Kanehsatà:ke Land Defense</p>
                     <div class="dividing-line"></div>
                     <div class="tech-stack-bubble">
-                        <div class="tech-item">Python</div>
+                        <div class="tech-item">Javascript</div>
+                        <div class="tech-item">HTML</div>
                         <div class="tech-item">CSS</div>
-                        <div class="tech-item">Streamlit</div>
-                        <div class="tech-item">Google Earth Engine</div>
+                        <div class="tech-item">Web Development</div>
+                        <div class="tech-item">Web Mapping</div>
                     </div>
                     <div class="container">
                         <div class="descriptor">
-                            <p>Continuing my passion for wine, I created this web app to compare the aspects making
-                                up
-                                Canadian terroir to those of famous wine regions of the world.
-                                I created template GeoJson objects and programatically filled the properties with
-                                data
-                                derived from Google Earth Engine.<br>
-                                I then ran a scoring algorithm comparing the terroir data for the location the user
-                                clicked
-                                to each famous wine region to return a similarity score.
-                                Whichever region has the most similar terroir is displayed to the user. <br>
-                                A more detailed description is available in the app's 'How It Works' tab.
+                            <p>
+                                In charge of the development of an online map allowing users to interact with the
+                                research of
+                                Ph.D. candidate Léa Denieul Pinsky surrounding the disposession of Mohawk land in the
+                                area
+                                surrounding what is today Oka, near Montreal.
+                                <br><br>
+
+                                This project was the winner of the <a
+                                    href="https://cartogis.org/awards/map-competition/" target="_blank">Cartography and
+                                    Geographic Information Society Annual Map Design Competition</a> and has become part
+                                of the permanent collection of the U.S. Library of Congress
+
                             </p>
                         </div>
                         <div class="image">
-                            <img src="assets/projects/Vineyards.png">
+                            <video src="assets\projects\Kanehsatake.mp4" autoplay loop muted defaultmuted>
                         </div>
                     </div>
                     <div class="button-container">
-                        <a href="https://canadianvineyards.streamlit.app/" target="_blank">
+                        <a href="https://geomedialab.github.io/Kanehsatake-Land-Defense/" target="_blank">
                             <span class="button" id="live-demo">Live Site</span>
                         </a>
-                        <a href="https://github.com/SpencerMartel/VineyardComparison" target="_blank"><span
-                                class="button" id="github-repo">Source Code</span></a>
+                        <a href="https://github.com/geomedialab/Kanehsatake-Land-Defense" target="_blank"><span class="button"
+                                id="github-repo">Source Code</span></a>
                     </div>
                 </div>
+
                 <!-- Beaune-NDVIproject -->
                 <div class="project">
                     <p>NDVI & Harvest in Beaune, France</p>
@@ -266,6 +274,45 @@
                                 id="github-repo">Source Code</span></a>
                     </div>
                 </div>
+
+                <!-- Canadian Vineyards Project -->
+                <div class="project">
+                    <p>Canadian Terroir</p>
+                    <div class="dividing-line"></div>
+                    <div class="tech-stack-bubble">
+                        <div class="tech-item">Python</div>
+                        <div class="tech-item">CSS</div>
+                        <div class="tech-item">Streamlit</div>
+                        <div class="tech-item">Google Earth Engine</div>
+                    </div>
+                    <div class="container">
+                        <div class="descriptor">
+                            <p>Continuing my passion for wine, I created this web app to compare the aspects making
+                                up
+                                Canadian terroir to those of famous wine regions of the world.
+                                I created template GeoJson objects and programatically filled the properties with
+                                data
+                                derived from Google Earth Engine.<br>
+                                I then ran a scoring algorithm comparing the terroir data for the location the user
+                                clicked
+                                to each famous wine region to return a similarity score.
+                                Whichever region has the most similar terroir is displayed to the user. <br>
+                                A more detailed description is available in the app's 'How It Works' tab.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/projects/Vineyards.png">
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <a href="https://canadianvineyards.streamlit.app/" target="_blank">
+                            <span class="button" id="live-demo">Live Site</span>
+                        </a>
+                        <a href="https://github.com/SpencerMartel/VineyardComparison" target="_blank"><span
+                                class="button" id="github-repo">Source Code</span></a>
+                    </div>
+                </div>
+
                 <!-- BC Wildfire Project -->
                 <div class="project">
                     <p>BC Wildfire Visualization Tool</p>

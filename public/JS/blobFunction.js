@@ -10,6 +10,6 @@
       blob.animate({
           left: `${clientX}px`,
           top: `${clientY}px`
-        }, { duration: 2000, fill: "forwards" });
+        }, { duration: 1000, fill: "forwards" });
   }}
 window.onload = blob();

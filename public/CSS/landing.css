@@ -95,15 +95,15 @@ main {
 .glow-line {
     width: calc(100% - var(--container-offset));
     height: calc(100% - var(--container-offset));
-    x: calc(var(--container-offset) / 2);
-    y: calc(var(--container-offset) / 2);
+    x: calc(var(--container-offset) / 2.05);
+    y: calc(var(--container-offset) / 2.1);
     fill: transparent;
     rx: 10px;
-    stroke-dasharray: 15px 35px;
+    stroke-dasharray: 20px 35px;
 }
 
 .call-to-action:is(:hover,:focus) :is(.glow-line, .glow-blur) {
-    stroke-dashoffset: -50px;
+    stroke-dashoffset: -70px;
     transition: stroke-dashoffset var(--animation-speed) ease-in-out;
 }
 
