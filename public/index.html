@@ -55,7 +55,7 @@
 
         <div class="landing-intro">
             <div class="picture-decoration">
-                <img src="assets/PersonalPhoto.jpg" class="personal-photo">
+                <img src="assets/PersonalPhoto2025.jpg" class="personal-photo">
             </div>
             <div class="intro-text">
                 <p>Hi! My name is
@@ -139,7 +139,9 @@
                                 <div class="dividing-line"></div>
                             </div>
                             <h2>Web developer for the Geomedia Lab under Ph.D. candidate Léa Denieul Pinsky.</h2>
-                            <h2>This project is live at <a href="https://geomedialab.github.io/Kanehsatake-Land-Defense/" target="_blank">https://geomedialab.github.io/Kanehsatake-Land-Defense/</a></h2>
+                            <h2>This project is live at <a
+                                    href="https://geomedialab.github.io/Kanehsatake-Land-Defense/"
+                                    target="_blank">https://geomedialab.github.io/Kanehsatake-Land-Defense/</a></h2>
                             <h2>Primary focus on creating an interactive map displaying Léa's research involving
                                 temporal components and query functionality inviting the user to interact with the data
                                 to learn about land disposession in the Kanehsatà:ke region.
@@ -196,6 +198,40 @@
             <p>Projects</p>
             <div class="glowing-line"></div>
             <div class="project-grid">
+                
+                <!-- Nopimiing Wildfire project -->
+                <div class="project">
+                    <p>Nopiming Wildfire Smoke Visualization</p>
+                    <div class="dividing-line"></div>
+                    <div class="tech-stack-bubble">
+                        <div class="tech-item">NOAA</div>
+                        <div class="tech-item">MatPlotlib</div>
+                        <div class="tech-item">Data Visualization</div>
+                    </div>
+                    <div class="container">
+                        <div class="descriptor">
+                            <p>
+                                in June 2025, my hometown of Montreal has had some of the worst air quality in the world due to smoke
+                                from wildfires in Quebec and Manitoba. Motivated by this (and having an excuse to stay inside),
+                                I made this animation to visualize near-surface smoke from the ongoing wildfire in Nopiming Provincial Park, Manitoba.
+                                <br><br>
+                                After wressling with NOAA's HRRR-Smoke Model data, all it took was making multiple MatPlotLib plots, and stitching them together to 
+                                show the impact of wildfire smoke far beyond the burn area. 
+                            </p>
+                        </div>
+                        <div class="image">
+                            <video src="assets\projects/NopimingSmokeTimelapse.mp4" autoplay loop muted defaultmuted>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <a href="assets/projects/NopimingSmokeTimelapse.mp4" target="_blank">
+                            <span class="button" id="live-demo">Full View</span>
+                        </a>
+                        <a href="https://github.com/SpencerMartel/NopimingSmoke/blob/main/NopimingSmokeTImelapse.ipynb" target="_blank"><span
+                                class="button" id="github-repo">Source Code</span></a>
+                    </div>
+                </div>
+
                 <!-- Kanehsatake project -->
                 <div class="project">
                     <p>Kanehsatà:ke Land Defense</p>
@@ -232,10 +268,45 @@
                         <a href="https://geomedialab.github.io/Kanehsatake-Land-Defense/" target="_blank">
                             <span class="button" id="live-demo">Live Site</span>
                         </a>
-                        <a href="https://github.com/geomedialab/Kanehsatake-Land-Defense" target="_blank"><span class="button"
-                                id="github-repo">Source Code</span></a>
+                        <a href="https://github.com/geomedialab/Kanehsatake-Land-Defense" target="_blank"><span
+                                class="button" id="github-repo">Source Code</span></a>
                     </div>
                 </div>
+
+
+                <!-- Morin Heights Cartography project -->
+                <div class="project">
+                    <p>Morin Heights Joyplot Map</p>
+                    <div class="dividing-line"></div>
+                    <div class="tech-stack-bubble">
+                        <div class="tech-item">QGIS</div>
+                        <div class="tech-item">DEM</div>
+                        <div class="tech-item">Design</div>
+                    </div>
+                    <div class="container">
+                        <div class="descriptor">
+                            <p>
+                                As a gift for my father's 60th birthday, I made a topographic map of the ski hill we
+                                would go to every Sunday when I was growing up.
+                                Inspired by the Joyplot style of mapping, the underlying data for this map is a
+                                publically available LiDAR derived DEM.
+                                <br><br>
+                                After some processing in QGIS, the result is a visually appealing representation of the topography of Morin Heights in southern Quebec.
+                                
+
+                            </p>
+                        </div>
+                        <div class="image">
+                            <image src="assets/projects/MorinHeightsScreenshot.png">
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <a href="assets/projects/MorinHeights.pdf" target="_blank">
+                            <span class="button" id="live-demo">Full Map</span>
+                        </a>
+                    </div>
+                </div>
+
 
                 <!-- Beaune-NDVIproject -->
                 <div class="project">
